@@ -8,7 +8,7 @@
   <style>
     /* Microsoft Fluent 2 Web Design Tokens (@fluentui/tokens) + Paleta Mundo FIT */
     :root {
-      --fontFamilyBase: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      --fontFamilyBase: "Segoe UI", -apple-system, BlinkMacSystemFont, "SF Pro Display", Roboto, sans-serif;
       --fontSizeBase200: 12px;
       --lineHeightBase200: 16px;
       --fontSizeBase300: 14px;
@@ -16,19 +16,19 @@
       --fontSizeBase400: 16px;
       --lineHeightBase400: 22px;
       --fontSizeBase500: 20px;
-      --lineHeightBase500: 28px;
-      --fontSizeHero800: 40px;
-      --lineHeightHero800: 52px;
+      --lineHeightBase500: 26px;
+      --fontSizeHero900: 52px;
+      --lineHeightHero900: 56px;
       --fontWeightRegular: 400;
       --fontWeightMedium: 500;
       --fontWeightSemibold: 600;
       --fontWeightBold: 700;
+      --fontWeightExtrabold: 800;
 
-      --borderRadiusSmall: 2px;
-      --borderRadiusMedium: 4px;
-      --borderRadiusLarge: 6px;
-      --borderRadiusXLarge: 8px;
-      --borderRadiusCircular: 10000px;
+      --borderRadiusMedium: 6px;
+      --borderRadiusLarge: 12px;
+      --borderRadiusXLarge: 20px;
+      --borderRadiusCircular: 999px;
 
       --strokeWidthThin: 1px;
       --strokeWidthThick: 2px;
@@ -41,28 +41,23 @@
       --spacingHorizontalXXL: 24px;
 
       --colorNeutralBackground1: #ffffff;
-      --colorNeutralBackground2: #fafafa;
-      --colorNeutralBackground3: #f5f5f5;
-      --colorNeutralBackgroundDisabled: #f0f0f0;
-      --colorNeutralForeground1: #242424;
-      --colorNeutralForeground2: #424242;
-      --colorNeutralForeground3: #616161;
-      --colorNeutralForegroundDisabled: #bdbdbd;
-      --colorNeutralStroke1: #d1d1d1;
-      --colorNeutralStroke2: #e0e0e0;
-      --colorNeutralStrokeDisabled: #e0e0e0;
+      --colorNeutralBackground2: #f8faf8;
+      --colorNeutralBackground3: #f2f5f2;
+      --colorNeutralForeground1: #111814;
+      --colorNeutralForeground2: #5a655e;
+      --colorNeutralForeground3: #8c9690;
+      --colorNeutralForegroundDisabled: #8c9690;
+      --colorNeutralStroke1: #e2e8e4;
+      --colorNeutralStroke2: #eef2ee;
 
       --colorBrandBackground: #16863d;
-      --colorBrandBackgroundHover: #126e32;
-      --colorBrandBackgroundPressed: #0d5225;
       --colorBrandBackground2: #e6f4ea;
       --colorBrandForeground1: #16863d;
-      --colorBrandForeground2: #0f5c29;
-      --colorBrandStroke1: #16863d;
+      --colorBrandForeground2: #126e32;
 
-      --shadow2: 0 1px 2px rgba(0, 0, 0, 0.14), 0 0 2px rgba(0, 0, 0, 0.12);
-      --shadow4: 0 2px 4px rgba(0, 0, 0, 0.14), 0 0 2px rgba(0, 0, 0, 0.12);
-      --shadow8: 0 4px 8px rgba(0, 0, 0, 0.14), 0 0 2px rgba(0, 0, 0, 0.12);
+      --shadow2: 0 2px 6px rgba(17, 24, 20, 0.04);
+      --shadow4: 0 10px 30px rgba(17, 24, 20, 0.04);
+      --shadow8: 0 8px 24px rgba(17, 21, 19, 0.14);
 
       --durationFast: 150ms;
       --curveEasyEase: cubic-bezier(0.33, 0, 0.67, 1);
@@ -82,209 +77,180 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Fluent 2 App Header / Nav Bar */
-    .fui-Header {
+    header {
       width: 100%;
-      height: 48px;
       background: var(--colorNeutralBackground1);
       border-bottom: var(--strokeWidthThin) solid var(--colorNeutralStroke2);
-      padding: 0 var(--spacingHorizontalXXL);
+      padding: 16px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: var(--fontSizeBase300);
     }
-    .fui-Header-brand {
+    .brand-top {
       display: flex;
       align-items: center;
-      gap: var(--spacingHorizontalS);
+      gap: 10px;
       color: var(--colorNeutralForeground3);
-      font-size: var(--fontSizeBase300);
     }
-    .fui-Header-brand img { width: 22px; height: 24px; }
-    .fui-Header-brand strong {
+    .brand-top img { width: 24px; height: 27px; }
+    .brand-top strong {
       color: var(--colorNeutralForeground1);
-      font-weight: var(--fontWeightSemibold);
+      font-weight: var(--fontWeightBold);
     }
-    .fui-Badge {
-      display: inline-flex;
-      align-items: center;
-      height: 20px;
-      padding: 0 6px;
-      border-radius: var(--borderRadiusMedium);
-      background: var(--colorNeutralBackground3);
-      border: var(--strokeWidthThin) solid var(--colorNeutralStroke2);
-      color: var(--colorNeutralForeground2);
-      font-size: var(--fontSizeBase200);
-      font-weight: var(--fontWeightMedium);
-    }
-    .fui-Link {
+    header a {
       color: var(--colorBrandForeground1);
       font-weight: var(--fontWeightSemibold);
-      font-size: var(--fontSizeBase300);
       text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
     }
-    .fui-Link:hover { color: var(--colorBrandForeground2); text-decoration: underline; }
-    .fui-Link:focus-visible { outline: var(--strokeWidthThick) solid var(--colorBrandStroke1); outline-offset: 2px; border-radius: var(--borderRadiusSmall); }
+    header a:hover { text-decoration: underline; }
 
     main {
       width: 100%;
-      max-width: 920px;
-      padding: 48px var(--spacingHorizontalXXL) 64px;
+      max-width: 960px;
+      padding: 56px 24px 72px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
-    .hero-logo { width: 80px; height: 90px; margin-bottom: var(--spacingHorizontalL); }
-    .fui-Display {
-      font-size: var(--fontSizeHero800);
-      line-height: var(--lineHeightHero800);
-      font-weight: var(--fontWeightBold);
-      letter-spacing: -0.5px;
-      margin-bottom: var(--spacingHorizontalM);
+    .hero-logo { width: 88px; height: 98px; margin-bottom: 18px; }
+    h1 {
+      font-size: var(--fontSizeHero900);
+      line-height: var(--lineHeightHero900);
+      font-weight: var(--fontWeightExtrabold);
+      letter-spacing: -1.2px;
+      margin-bottom: 16px;
       color: var(--colorNeutralForeground1);
     }
-    .fui-Display span { color: var(--colorBrandForeground1); }
-    .fui-Subtitle {
-      font-size: var(--fontSizeBase400);
-      line-height: var(--lineHeightBase400);
+    h1 span { color: var(--colorBrandForeground1); }
+    .subtitle {
+      font-size: 19px;
       color: var(--colorNeutralForeground2);
-      max-width: 620px;
-      margin-bottom: 28px;
+      line-height: 1.55;
+      max-width: 660px;
+      margin-bottom: 34px;
     }
 
-    /* Fluent 2 Button Group */
-    .fui-ButtonGroup {
+    .buttons {
       display: flex;
-      gap: var(--spacingHorizontalM);
-      margin-bottom: 44px;
+      gap: 14px;
+      margin-bottom: 52px;
       flex-wrap: wrap;
       justify-content: center;
     }
-    .fui-Button {
-      min-height: 40px;
-      padding: 8px var(--spacingHorizontalXXL);
-      border-radius: var(--borderRadiusLarge);
-      font-family: var(--fontFamilyBase);
+    .btn-mac {
+      background: #111513;
+      color: #ffffff;
+      padding: 15px 42px;
+      border-radius: var(--borderRadiusCircular);
       font-size: var(--fontSizeBase400);
-      line-height: var(--lineHeightBase400);
       font-weight: var(--fontWeightSemibold);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: var(--spacingHorizontalS);
-      transition: background var(--durationFast) var(--curveEasyEase), box-shadow var(--durationFast) var(--curveEasyEase);
+      gap: 10px;
+      box-shadow: var(--shadow8);
+      transition: transform var(--durationFast) var(--curveEasyEase), background var(--durationFast) var(--curveEasyEase);
     }
-    .fui-Button--primary {
-      background: var(--colorBrandBackground);
-      color: #ffffff;
-      border: var(--strokeWidthThin) solid transparent;
-      box-shadow: var(--shadow2);
-    }
-    .fui-Button--primary:hover { background: var(--colorBrandBackgroundHover); box-shadow: var(--shadow4); }
-    .fui-Button--primary:active { background: var(--colorBrandBackgroundPressed); }
-    .fui-Button--primary:focus-visible { outline: var(--strokeWidthThick) solid var(--colorNeutralForeground1); outline-offset: 2px; }
+    .btn-mac:hover { background: #222925; transform: translateY(-1px); }
+    .btn-mac svg { display: block; flex-shrink: 0; }
 
-    .fui-Button--disabled {
-      background: var(--colorNeutralBackgroundDisabled);
+    .btn-win {
+      background: var(--colorNeutralBackground1);
       color: var(--colorNeutralForegroundDisabled);
-      border: var(--strokeWidthThin) solid var(--colorNeutralStrokeDisabled);
-      cursor: not-allowed;
+      border: var(--strokeWidthThin) solid var(--colorNeutralStroke1);
+      padding: 15px 28px;
+      border-radius: var(--borderRadiusCircular);
+      font-size: 15px;
+      font-weight: var(--fontWeightSemibold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      cursor: default;
     }
-    .fui-Button--disabled small {
-      font-size: var(--fontSizeBase200);
-      font-weight: var(--fontWeightRegular);
+    .btn-win svg { display: block; flex-shrink: 0; }
+    .btn-win small {
+      font-weight: var(--fontWeightMedium);
+      font-size: 13px;
+      color: #a3ada7;
     }
 
-    /* Fluent 2 Cards Grid (Steps) */
     .steps-row {
       display: grid;
       grid-template-columns: 1fr auto 1fr auto 1fr;
       align-items: stretch;
-      gap: var(--spacingHorizontalM);
+      gap: 14px;
       width: 100%;
-      margin-bottom: 28px;
+      margin-bottom: 36px;
     }
     .step-arrow {
-      color: var(--colorNeutralForeground3);
+      color: #9aa59e;
       display: flex;
       align-items: center;
       justify-content: center;
+      user-select: none;
     }
-    .fui-Card {
+    .step-card {
       background: var(--colorNeutralBackground1);
       border: var(--strokeWidthThin) solid var(--colorNeutralStroke2);
       border-radius: var(--borderRadiusXLarge);
-      padding: var(--spacingHorizontalXXL);
+      padding: 28px 24px;
       text-align: left;
       box-shadow: var(--shadow4);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
     }
     .step-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--borderRadiusLarge);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
       background: var(--colorBrandBackground2);
       color: var(--colorBrandForeground1);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: var(--spacingHorizontalL);
+      margin-bottom: 18px;
     }
     .step-num {
       color: var(--colorBrandForeground1);
-      font-size: var(--fontSizeBase200);
-      line-height: var(--lineHeightBase200);
-      font-weight: var(--fontWeightSemibold);
-      margin-bottom: var(--spacingHorizontalXS);
+      font-size: 13px;
+      font-weight: var(--fontWeightBold);
+      margin-bottom: 6px;
     }
     .step-title {
       font-size: var(--fontSizeBase500);
-      line-height: var(--lineHeightBase500);
-      font-weight: var(--fontWeightSemibold);
+      font-weight: var(--fontWeightExtrabold);
       color: var(--colorNeutralForeground1);
+      line-height: 1.25;
     }
 
-    /* Fluent 2 Subtle Info Cards */
     .faq {
       display: grid;
       grid-template-columns: 1.35fr 1fr;
-      gap: var(--spacingHorizontalL);
+      gap: 18px;
       width: 100%;
     }
-    .fui-Card--subtle {
-      background: var(--colorNeutralBackground1);
-      border: var(--strokeWidthThin) solid var(--colorNeutralStroke2);
+    .faq-card {
+      background: var(--colorNeutralBackground3);
       border-radius: var(--borderRadiusXLarge);
-      padding: var(--spacingHorizontalXL) var(--spacingHorizontalXXL);
+      padding: 24px 26px;
       text-align: left;
-      box-shadow: var(--shadow2);
     }
-    .fui-Card--subtle h2 {
-      font-size: var(--fontSizeBase400);
-      line-height: var(--lineHeightBase400);
-      font-weight: var(--fontWeightSemibold);
-      margin-bottom: 6px;
+    .faq-card h2 {
+      font-size: 17px;
+      font-weight: var(--fontWeightExtrabold);
+      margin-bottom: 8px;
       color: var(--colorNeutralForeground1);
-      display: flex;
-      align-items: center;
-      gap: var(--spacingHorizontalS);
     }
-    .fui-Card--subtle h2 svg { color: var(--colorBrandForeground1); flex-shrink: 0; }
-    .fui-Card--subtle p {
+    .faq-card p {
       font-size: var(--fontSizeBase300);
-      line-height: var(--lineHeightBase300);
       color: var(--colorNeutralForeground2);
+      line-height: 1.55;
     }
 
     @media (max-width: 760px) {
-      .fui-Display { font-size: 32px; line-height: 40px; }
+      h1 { font-size: 40px; }
       .steps-row { grid-template-columns: 1fr; }
       .step-arrow { display: none; }
       .faq { grid-template-columns: 1fr; }
@@ -292,57 +258,65 @@
   </style>
 </head>
 <body>
-  <header class="fui-Header">
-    <div class="fui-Header-brand">
+  <header>
+    <div class="brand-top">
       <img src="mundo-fit-logo.svg" alt="Mundo FIT">
       <strong>Nomad Creators</strong>
-      <span class="fui-Badge">Uso interno</span>
+      <span>Uso interno</span>
     </div>
-    <a href="#ajuda" class="fui-Link">
-      <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16m0 1a7 7 0 1 0 0 14 7 7 0 0 0 0-14m0 10.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5m0-8a2.5 2.5 0 0 1 1.65 4.38l-.15.12-.22.17-.09.07-.16.15c-.33.36-.53.85-.53 1.61a.5.5 0 0 1-1 0 3.2 3.2 0 0 1 1.16-2.62l.25-.19.12-.1A1.5 1.5 0 0 0 10 6.5c-.83 0-1.5.67-1.5 1.5a.5.5 0 0 1-1 0A2.5 2.5 0 0 1 10 5.5"/></svg>
-      Precisa de ajuda?
-    </a>
+    <a href="#ajuda">Precisa de ajuda?</a>
   </header>
   <main>
     <img src="mundo-fit-logo.svg" alt="Escudo Mundo FIT" class="hero-logo">
-    <h1 class="fui-Display">Mundo <span>FIT</span></h1>
-    <p class="fui-Subtitle">
+    <h1>Mundo <span>FIT</span></h1>
+    <p class="subtitle">
       Vendas, criativos, ranking, produção e metas em um só lugar.<br>
       Dados reais da Utmify e do ClickUp.
     </p>
-    <div class="fui-ButtonGroup">
-      <a href="https://github.com/pedrotgon/mundo-fit/releases/latest/download/Mundo-FIT-Instalador.dmg" download="Mundo-FIT-Instalador.dmg" class="fui-Button fui-Button--primary">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 4c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-4v1a1 1 0 0 0 1 1h.5a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1H7a1 1 0 0 0 1-1v-1H4a2 2 0 0 1-2-2zm1 8v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1zm14-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7zm-5.73 6a2 2 0 0 1-.27-1v-1H9v1a2 2 0 0 1-.27 1z"/></svg>
+    <div class="buttons">
+      <a href="https://github.com/pedrotgon/mundo-fit/releases/latest/download/Mundo-FIT-Instalador.dmg" download="Mundo-FIT-Instalador.dmg" class="btn-mac">
+        <!-- Logo oficial Apple com folha superior integra -->
+        <svg width="16" height="19" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true">
+          <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+        </svg>
         Mac
       </a>
-      <span class="fui-Button fui-Button--disabled" aria-disabled="true">
-        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6 3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zM4 6c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2zm0 1h12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>
+      <span class="btn-win" aria-disabled="true">
+        <!-- Logo oficial Windows -->
+        <svg width="15" height="15" viewBox="0 0 88 88" fill="currentColor" aria-hidden="true">
+          <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.026 45.7zm4.326-39.025L87.314 0v41.527l-47.318.376zm47.329 39.349l-.011 41.34-47.318-6.678-.066-34.739z"/>
+        </svg>
         Windows <small>em breve</small>
       </span>
     </div>
     <div class="steps-row">
-      <div class="fui-Card">
+      <div class="step-card">
         <div class="step-icon">
+          <!-- Fluent 2 ArrowDownload24Regular -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.25 20.5a.75.75 0 1 1 0 1.5h-13a.75.75 0 1 1 0-1.5zm-6.6-18.49h.1c.38 0 .7.28.74.64l.01.1v13.7l3.72-3.73a.75.75 0 0 1 .98-.07l.08.07c.27.27.3.68.07.98l-.07.08-5 5a.75.75 0 0 1-.97.07l-.09-.07-5-5a.75.75 0 0 1 .98-1.13l.08.07L11 16.43V2.76c0-.38.28-.7.65-.75h.1z"/></svg>
         </div>
         <div class="step-num">Passo 1</div>
         <div class="step-title">Baixe o arquivo</div>
       </div>
       <div class="step-arrow" aria-hidden="true">
+        <!-- Fluent 2 ArrowRight20Regular -->
         <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10.84 3.13a.5.5 0 0 0-.68.74l6.17 5.63H2.5a.5.5 0 0 0 0 1h13.83l-6.17 5.63a.5.5 0 0 0 .68.74l6.91-6.32a.75.75 0 0 0 0-1.1z"/></svg>
       </div>
-      <div class="fui-Card">
+      <div class="step-card">
         <div class="step-icon">
+          <!-- Fluent 2 FolderArrowRight24Regular -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.5 6.25V8h4.63q.31 0 .53-.22l1.53-1.53-1.53-1.53a.8.8 0 0 0-.53-.22H5.25c-.97 0-1.75.78-1.75 1.75m-1.5 0C2 4.45 3.46 3 5.25 3h2.88c.6 0 1.17.24 1.59.66l1.84 1.84h7.19c1.8 0 3.25 1.46 3.25 3.25v4.06a7 7 0 0 0-1.5-1.08V8.75c0-.97-.78-1.75-1.75-1.75h-7.19L9.72 8.84c-.42.42-1 .66-1.6.66H3.5v8.25c0 .97.78 1.75 1.75 1.75h6.06q.27.8.71 1.5H5.25A3.25 3.25 0 0 1 2 17.75zM17.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11m-3 5a.5.5 0 0 0 0 1h4.8l-1.65 1.65a.5.5 0 0 0 .7.7l2.5-2.5a.5.5 0 0 0 0-.7l-2.5-2.5a.5.5 0 0 0-.7.7L19.29 17z"/></svg>
         </div>
         <div class="step-num">Passo 2</div>
         <div class="step-title">Arraste para Aplicativos</div>
       </div>
       <div class="step-arrow" aria-hidden="true">
+        <!-- Fluent 2 ArrowRight20Regular -->
         <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10.84 3.13a.5.5 0 0 0-.68.74l6.17 5.63H2.5a.5.5 0 0 0 0 1h13.83l-6.17 5.63a.5.5 0 0 0 .68.74l6.91-6.32a.75.75 0 0 0 0-1.1z"/></svg>
       </div>
-      <div class="fui-Card">
+      <div class="step-card">
         <div class="step-icon">
+          <!-- Fluent 2 PlayCircle24Regular -->
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10.86 8.15A1.25 1.25 0 0 0 9 9.25v5.5c0 .95 1.02 1.56 1.86 1.1l5.75-3.2a.75.75 0 0 0 0-1.3zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M3.5 12a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0"/></svg>
         </div>
         <div class="step-num">Passo 3</div>
@@ -350,18 +324,12 @@
       </div>
     </div>
     <div class="faq" id="ajuda">
-      <div class="fui-Card--subtle">
-        <h2>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.72 2.08a.5.5 0 0 1 .56 0q2.9 1.94 6.3 2.43A.5.5 0 0 1 17 5v4.6q-.48-.25-1-.4V5.44a16 16 0 0 1-5.6-2.08L10 3.1l-.4.25A16 16 0 0 1 4 5.43V9.5c0 3.24 1.8 5.64 5.48 7.25q.3.65.74 1.2l-.04.02a.5.5 0 0 1-.36 0C5.31 16.23 3 13.39 3 9.5V5a.5.5 0 0 1 .43-.5 15 15 0 0 0 6.3-2.42M19 14.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0m-2.15-1.85a.5.5 0 0 0-.7 0l-2.65 2.64-.65-.64a.5.5 0 0 0-.7.7l1 1c.2.2.5.2.7 0l3-3a.5.5 0 0 0 0-.7"/></svg>
-          O Mac bloqueou o aplicativo?
-        </h2>
-        <p>Isso é normal na primeira vez. Abra Ajustes do Sistema. Clique em Privacidade e Segurança. Clique em Abrir Mesmo Assim.</p>
+      <div class="faq-card">
+        <h2>O Mac bloqueou o aplicativo?</h2>
+        <p>Isso é normal na primeira vez. Clique em OK no aviso (não clique em Mover para o Lixo). Depois, abra Ajustes do Sistema, clique em Privacidade e Segurança e clique em Abrir Mesmo Assim.</p>
       </div>
-      <div class="fui-Card--subtle">
-        <h2>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16m0 1a7 7 0 1 0 0 14 7 7 0 0 0 0-14m0 10.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5m0-8a2.5 2.5 0 0 1 1.65 4.38l-.15.12-.22.17-.09.07-.16.15c-.33.36-.53.85-.53 1.61a.5.5 0 0 1-1 0 3.2 3.2 0 0 1 1.16-2.62l.25-.19.12-.1A1.5 1.5 0 0 0 10 6.5c-.83 0-1.5.67-1.5 1.5a.5.5 0 0 1-1 0A2.5 2.5 0 0 1 10 5.5"/></svg>
-          Precisa de ajuda?
-        </h2>
+      <div class="faq-card">
+        <h2>Precisa de ajuda?</h2>
         <p>Fale com Pedro. Envie uma foto da tela com o erro.</p>
       </div>
     </div>
