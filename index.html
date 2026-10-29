@@ -14,7 +14,7 @@
       --muted: #5a655e;
       --green: #16863d;
       --green-soft: #e6f4ea;
-      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -48,6 +48,9 @@
       color: var(--green);
       font-weight: 600;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
     header a:hover { text-decoration: underline; }
     main {
@@ -121,8 +124,9 @@
     }
     .step-arrow {
       color: #9aa59e;
-      font-size: 22px;
-      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .step-card {
       background: var(--card);
@@ -172,7 +176,11 @@
       font-weight: 800;
       margin-bottom: 8px;
       color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
+    .faq-card h2 svg { color: var(--green); flex-shrink: 0; }
     .faq-card p {
       font-size: 14px;
       color: var(--muted);
@@ -187,13 +195,17 @@
   </style>
 </head>
 <body>
+  <!-- Todos os ícones: Microsoft Fluent 2 System Icons (20Regular e 24Regular) -->
   <header>
     <div class="brand-top">
       <img src="mundo-fit-logo.svg" alt="Mundo FIT">
       <strong>Nomad Creators</strong>
       <span>Uso interno</span>
     </div>
-    <a href="#ajuda">Precisa de ajuda?</a>
+    <a href="#ajuda">
+      <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16m0 1a7 7 0 1 0 0 14 7 7 0 0 0 0-14m0 10.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5m0-8a2.5 2.5 0 0 1 1.65 4.38l-.15.12-.22.17-.09.07-.16.15c-.33.36-.53.85-.53 1.61a.5.5 0 0 1-1 0 3.2 3.2 0 0 1 1.16-2.62l.25-.19.12-.1A1.5 1.5 0 0 0 10 6.5c-.83 0-1.5.67-1.5 1.5a.5.5 0 0 1-1 0A2.5 2.5 0 0 1 10 5.5"/></svg>
+      Precisa de ajuda?
+    </a>
   </header>
   <main>
     <img src="mundo-fit-logo.svg" alt="Escudo Mundo FIT" class="hero-logo">
@@ -204,34 +216,38 @@
     </p>
     <div class="buttons">
       <a href="https://github.com/pedrotgon/mundo-fit/releases/latest/download/Mundo-FIT-Instalador.dmg" download="Mundo-FIT-Instalador.dmg" class="btn-mac">
-        <svg width="17" height="17" viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.67-7.81-11.96-14.34-6.41-9.78-11.48-20.87-15.19-33.26-3.71-12.4-5.57-23.75-5.57-34.07 0-14.34 3.73-26.31 11.19-35.91 7.46-9.6 16.79-14.53 27.97-14.78 4.8 0 10.37 1.33 16.71 3.99 6.34 2.66 10.23 4.05 11.67 4.17 1.84 0 6.01-1.46 12.51-4.38 6.5-2.92 11.97-4.25 16.42-3.99 12.4.9 22.42 5.56 30.06 13.99-10.8 6.53-16.07 15.46-15.82 26.8.25 8.94 3.65 16.42 10.2 22.44 6.55 6.02 14.34 9.53 23.36 10.53-2.45 7.46-5.46 15.22-9.02 23.28zM119.22 33.15c0-7.35 2.66-14.34 7.98-20.97 5.32-6.63 11.89-10.74 19.72-12.33.25 1.02.38 2.04.38 3.07 0 7.35-2.8 14.47-8.4 21.36-5.6 6.89-12.28 10.84-20.04 11.86-.5-1-.74-2-.74-2.99z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 4c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-4v1a1 1 0 0 0 1 1h.5a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1H7a1 1 0 0 0 1-1v-1H4a2 2 0 0 1-2-2zm1 8v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1zm14-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7zm-5.73 6a2 2 0 0 1-.27-1v-1H9v1a2 2 0 0 1-.27 1z"/></svg>
         Mac
       </a>
       <span class="btn-win" aria-disabled="true">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 2.24L6.4 1.36v6.24H0V2.24zm0 6.88h6.4v6.24L0 14.48V9.12zm7.2-7.84L16 0v7.6H7.2V1.28zm8.8 7.84L16 16l-8.8-1.28V9.12H16z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6 3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zM4 6c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2zm0 1h12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>
         Windows <small>em breve</small>
       </span>
     </div>
     <div class="steps-row">
       <div class="step-card">
         <div class="step-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.25 20.5a.75.75 0 1 1 0 1.5h-13a.75.75 0 1 1 0-1.5zm-6.6-18.49h.1c.38 0 .7.28.74.64l.01.1v13.7l3.72-3.73a.75.75 0 0 1 .98-.07l.08.07c.27.27.3.68.07.98l-.07.08-5 5a.75.75 0 0 1-.97.07l-.09-.07-5-5a.75.75 0 0 1 .98-1.13l.08.07L11 16.43V2.76c0-.38.28-.7.65-.75h.1z"/></svg>
         </div>
         <div class="step-num">Passo 1</div>
         <div class="step-title">Baixe o arquivo</div>
       </div>
-      <div class="step-arrow" aria-hidden="true">→</div>
+      <div class="step-arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10.84 3.13a.5.5 0 0 0-.68.74l6.17 5.63H2.5a.5.5 0 0 0 0 1h13.83l-6.17 5.63a.5.5 0 0 0 .68.74l6.91-6.32a.75.75 0 0 0 0-1.1z"/></svg>
+      </div>
       <div class="step-card">
         <div class="step-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12h6"/><path d="m12 9 3 3-3 3"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.5 6.25V8h4.63q.31 0 .53-.22l1.53-1.53-1.53-1.53a.8.8 0 0 0-.53-.22H5.25c-.97 0-1.75.78-1.75 1.75m-1.5 0C2 4.45 3.46 3 5.25 3h2.88c.6 0 1.17.24 1.59.66l1.84 1.84h7.19c1.8 0 3.25 1.46 3.25 3.25v4.06a7 7 0 0 0-1.5-1.08V8.75c0-.97-.78-1.75-1.75-1.75h-7.19L9.72 8.84c-.42.42-1 .66-1.6.66H3.5v8.25c0 .97.78 1.75 1.75 1.75h6.06q.27.8.71 1.5H5.25A3.25 3.25 0 0 1 2 17.75zM17.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11m-3 5a.5.5 0 0 0 0 1h4.8l-1.65 1.65a.5.5 0 0 0 .7.7l2.5-2.5a.5.5 0 0 0 0-.7l-2.5-2.5a.5.5 0 0 0-.7.7L19.29 17z"/></svg>
         </div>
         <div class="step-num">Passo 2</div>
         <div class="step-title">Arraste para Aplicativos</div>
       </div>
-      <div class="step-arrow" aria-hidden="true">→</div>
+      <div class="step-arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10.84 3.13a.5.5 0 0 0-.68.74l6.17 5.63H2.5a.5.5 0 0 0 0 1h13.83l-6.17 5.63a.5.5 0 0 0 .68.74l6.91-6.32a.75.75 0 0 0 0-1.1z"/></svg>
+      </div>
       <div class="step-card">
         <div class="step-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10.86 8.15A1.25 1.25 0 0 0 9 9.25v5.5c0 .95 1.02 1.56 1.86 1.1l5.75-3.2a.75.75 0 0 0 0-1.3zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M3.5 12a8.5 8.5 0 1 1 17 0 8.5 8.5 0 0 1-17 0"/></svg>
         </div>
         <div class="step-num">Passo 3</div>
         <div class="step-title">Abra o aplicativo</div>
@@ -239,11 +255,17 @@
     </div>
     <div class="faq" id="ajuda">
       <div class="faq-card">
-        <h2>O Mac bloqueou o aplicativo?</h2>
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.72 2.08a.5.5 0 0 1 .56 0q2.9 1.94 6.3 2.43A.5.5 0 0 1 17 5v4.6q-.48-.25-1-.4V5.44a16 16 0 0 1-5.6-2.08L10 3.1l-.4.25A16 16 0 0 1 4 5.43V9.5c0 3.24 1.8 5.64 5.48 7.25q.3.65.74 1.2l-.04.02a.5.5 0 0 1-.36 0C5.31 16.23 3 13.39 3 9.5V5a.5.5 0 0 1 .43-.5 15 15 0 0 0 6.3-2.42M19 14.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0m-2.15-1.85a.5.5 0 0 0-.7 0l-2.65 2.64-.65-.64a.5.5 0 0 0-.7.7l1 1c.2.2.5.2.7 0l3-3a.5.5 0 0 0 0-.7"/></svg>
+          O Mac bloqueou o aplicativo?
+        </h2>
         <p>Isso é normal na primeira vez. Abra Ajustes do Sistema. Clique em Privacidade e Segurança. Clique em Abrir Mesmo Assim.</p>
       </div>
       <div class="faq-card">
-        <h2>Precisa de ajuda?</h2>
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16m0 1a7 7 0 1 0 0 14 7 7 0 0 0 0-14m0 10.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5m0-8a2.5 2.5 0 0 1 1.65 4.38l-.15.12-.22.17-.09.07-.16.15c-.33.36-.53.85-.53 1.61a.5.5 0 0 1-1 0 3.2 3.2 0 0 1 1.16-2.62l.25-.19.12-.1A1.5 1.5 0 0 0 10 6.5c-.83 0-1.5.67-1.5 1.5a.5.5 0 0 1-1 0A2.5 2.5 0 0 1 10 5.5"/></svg>
+          Precisa de ajuda?
+        </h2>
         <p>Fale com Pedro. Envie uma foto da tela com o erro.</p>
       </div>
     </div>
