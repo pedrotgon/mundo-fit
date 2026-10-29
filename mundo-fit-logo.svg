@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112" role="img" aria-label="Mundo FIT">
+  <!-- Redesenho vetorial da marca Mundo FIT a partir das imagens de referência de 28/10/2026. Não é traçado automático. -->
+  <defs>
+    <linearGradient id="mf-shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9CC030"/>
+      <stop offset=".55" stop-color="#2E8540"/>
+      <stop offset="1" stop-color="#0B5A31"/>
+    </linearGradient>
+  </defs>
+  <path d="M50 4C63 12 78 15 93 15V52C93 80 75 98 50 108C25 98 7 80 7 52V15C22 15 37 12 50 4Z" fill="none" stroke="url(#mf-shield)" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M93 15V52C93 80 75 98 50 108" fill="none" stroke="#E47818" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M26 82C22 66 26 50 40 38C38 52 40 62 46 70C38 70 31 74 26 82Z" fill="#78A83C"/>
+  <path d="M38 64L66 30" stroke="#2E8540" stroke-width="7" stroke-linecap="round"/>
+  <path d="M56 25H73V42Z" fill="#2E8540" stroke="#2E8540" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="64" cy="52" r="5" fill="#9CC030"/>
+  <path d="M30 92C46 84 58 72 80 58C66 74 56 84 44 92" fill="#0B5A31"/>
+  <path d="M48 66C54 60 60 60 66 62" fill="none" stroke="#3C843C" stroke-width="5" stroke-linecap="round"/>
+</svg>
